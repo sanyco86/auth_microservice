@@ -28,6 +28,7 @@ namespace :db do
       migrate = File.expand_path('../../db/migrate', __dir__)
 
       Sequel::Migrator.run(db, migrate, target: version)
+      Rake::Task['db:schema'].execute
     end
   end
 
@@ -41,9 +42,10 @@ namespace :db do
       version          = 0
       target_migration = db[:schema_migrations].reverse_order(:filename).offset(step).first
       version          = Integer(target_migration[:filename].match(/([\d]+)/)[0]) if target_migration
-      migrate       = File.expand_path('../../db/migrate', __dir__)
+      migrate          = File.expand_path('../../db/migrate', __dir__)
 
       Sequel::Migrator.run(db, migrate, target: version)
+      Rake::Task['db:schema'].execute
     end
   end
 end

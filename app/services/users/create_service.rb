@@ -9,7 +9,11 @@ module Users
     attr_reader :user
 
     def call
-      @user = User.new(name: @name, email: @email, password: @password)
+      @user = User.new(
+        name: @name,
+        email: @email,
+        password: @password
+      )
 
       if @user.valid?
         @user.save

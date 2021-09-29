@@ -3,5 +3,5 @@ db:
   host: localhost
   user: postgres
 
-pagination:
-  page_size: 10
+app:
+  secret: '123456789'

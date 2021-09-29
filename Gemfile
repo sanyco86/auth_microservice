@@ -17,6 +17,7 @@ gem 'config', '3.1.0'
 
 gem 'pg', '1.2.3'
 gem 'sequel', '5.48.0'
+gem 'sequel_secure_password', '0.2.15'
 
 gem 'dry-initializer', '3.0.4'
 gem 'dry-validation', '1.7.0'

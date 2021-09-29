@@ -1,3 +1,5 @@
 require_relative 'config/environment'
 
-run Application
+run Rack::URLMap.new(
+  '/api/v1/sign_up' => UserRoutes,
+)

@@ -5,3 +5,7 @@ db:
 
 app:
   secret: '123456789'
+
+rabbit_mq:
+  consumer_pool: 10
+  url: amqp://user_name:password@localhost:5672

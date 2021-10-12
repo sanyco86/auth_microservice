@@ -15,6 +15,7 @@ gem 'sinatra-contrib', '2.1.0'
 gem 'i18n', '1.8.10'
 gem 'config', '3.1.0'
 gem 'jwt', '2.2.3'
+gem 'bunny', '2.19.0'
 
 gem 'pg', '1.2.3'
 gem 'sequel', '5.48.0'

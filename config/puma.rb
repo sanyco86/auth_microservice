@@ -1,3 +1,3 @@
-port ENV.fetch('PORT', 3000)
+port ENV.fetch('PORT', 3001)
 
 log_requests true

@@ -1,11 +1,16 @@
+app:
+  secret: f123h456j789k
+  name: auth
+
 db:
   adapter: postgresql
   host: localhost
   user: postgres
 
-app:
-  secret: '123456789'
-
 rabbit_mq:
   consumer_pool: 10
   url: amqp://user_name:password@localhost:5672
+
+logger:
+  path: log/app.log
+  level: info

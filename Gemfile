@@ -12,6 +12,10 @@ gem 'rake', '13.0.6'
 gem 'sinatra', '2.1.0', require: 'sinatra/base'
 gem 'sinatra-contrib', '2.1.0'
 
+gem 'rack-ougai', '0.2.1'
+gem 'rack-request-id', '0.0.4'
+gem 'amazing_print', '1.4.0'
+
 gem 'i18n', '1.8.10'
 gem 'config', '3.1.0'
 gem 'jwt', '2.2.3'

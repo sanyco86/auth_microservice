@@ -3,7 +3,7 @@ namespace :db do
   task :schema, %i[version] => :settings do |_|
     require 'sequel'
 
-    Sequel.connect(Settings.db.to_hash) do |db|
+    Sequel.connect(Settings.db.url || Settings.db.to_hash) do |db|
       db.extension(:schema_dumper)
 
       schema_dir = File.expand_path('../../../db', __FILE__)

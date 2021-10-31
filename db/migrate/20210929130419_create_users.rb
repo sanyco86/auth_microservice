@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 Sequel.migration do
   up do
-    run 'CREATE EXTENSION IF NOT EXISTS citext'
+    # $ sudo -u postgres psql
+    # postgres=# CREATE EXTENSION citext;
+    # postgres=# \q
 
     create_table(:users) do
       primary_key :id, type: :Bignum

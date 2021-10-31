@@ -1,16 +1,6 @@
 Sequel.migration do
   change do
-    create_table(:schema_info) do
-      Integer :version, :default=>0, :null=>false
-    end
-    
     create_table(:schema_migrations) do
-      String :filename, :text=>true, :null=>false
-      
-      primary_key [:filename]
-    end
-    
-    create_table(:schema_seeds) do
       String :filename, :text=>true, :null=>false
       
       primary_key [:filename]

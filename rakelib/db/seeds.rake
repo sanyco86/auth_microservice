@@ -6,7 +6,7 @@ namespace :db do
     Sequel.extension :seed
     Sequel::Seed.setup(ENV['RACK_ENV'])
 
-    Sequel.connect(Settings.db.to_hash) do |db|
+    Sequel.connect(Settings.db.url || Settings.db.to_hash) do |db|
       version = args.version.to_i if args.version
       seeds = File.expand_path('../../db/seeds', __dir__)
 
